@@ -2295,7 +2295,7 @@ if command -v fzf >/dev/null 2>&1; then
 			local selected=$(print $list | ${=zlua_fzf} | sed 's/^[0-9,.]* *//')
 
 			if [ -n "$selected" ]; then
-				cd ${selected}
+				builtin cd ${selected}
 				printf '\e[5n'
 			fi
 		fi
